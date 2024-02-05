@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'roboto';
+    src: url(fonts/Roboto-Light.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url(fonts/Montserrat-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url(fonts/Montserrat-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(24, 161, 148);
+    max-width: 600px;
+    margin: auto;
+    font-family: "roboto", "PT Sans", Calibri, Tahoma, sans-serif;
+}
+
+fieldset {
+    margin-bottom: 15px;
+}
+
+legend {
+    font-family: "montserrat", "PT Sans", Calibri, Tahoma, sans-serif;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.form-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.field {
+    margin-bottom: 10px;
+}
+input, select {
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 200px;
+    height: 30px;
+    padding: 1px 2px;
+}
+
+textarea {
+    border-radius: 5px;
+    width: 300px;
+    height: 60px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 20px;
+    height: 20px;
+
+}
+
+input[value] {
+    color: gray;
+}
+
+button {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+
+}
+
+button:hover {
+    
+}
