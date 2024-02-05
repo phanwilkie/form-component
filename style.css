@@ -21,41 +21,55 @@
 
 body {
     background-color: rgb(24, 161, 148);
-    max-width: 600px;
-    margin: auto;
     font-family: "roboto", "PT Sans", Calibri, Tahoma, sans-serif;
 }
 
 fieldset {
     margin-bottom: 15px;
+    border-style: none;
 }
 
 legend {
     font-family: "montserrat", "PT Sans", Calibri, Tahoma, sans-serif;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    font-size: 20px;
 }
 
 .form-container {
+    max-width: 600px;
+    margin: auto;
     margin-top: 20px;
     margin-bottom: 40px;
 }
 
 .field {
+    display: flex;
+    flex-direction: row;
     margin-bottom: 10px;
+    justify-content: space-between;
 }
+
+.field > input {
+
+}
+
 input, select {
-    border-radius: 5px;
+    /* border-radius: 5px; */
     box-sizing: border-box;
-    width: 200px;
-    height: 30px;
+    width: 250px;
+    height: 40px;
     padding: 1px 2px;
 }
 
+input[value], textarea[value] {
+    color: gray;
+}
+
 textarea {
-    border-radius: 5px;
-    width: 300px;
-    height: 60px;
+    /* border-radius: 5px; */
+    width: 250px;
+    height: 90px;
 }
 
 input[type="checkbox"], input[type="radio"] {
@@ -64,17 +78,45 @@ input[type="checkbox"], input[type="radio"] {
 
 }
 
-input[value] {
-    color: gray;
+#exp_month, #exp_year, #ccv {
+    width: 50px;
+}
+
+progress {
+    height: 24px;
+    width: 100%;
+    border-radius: 0px;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: rgba(184, 184, 255, 0.197);
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: hsla(240,100%,86.08%, 1);
 }
 
 button {
     border-radius: 5px;
+    border-style: none;
     background-color: black;
     color: white;
-
+    width: 180px;
+    height: 70px;
+    font-size: 17px;
+    font-family: "roboto", "PT Sans", Calibri, Tahoma, sans-serif;
 }
 
 button:hover {
-    
+    background-color: rgb(28, 42, 47);
+}
+
+.form-container {
+    background-color: hsla(247.5,100%,98.43%,1);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+form {
+    padding: 10px;
 }

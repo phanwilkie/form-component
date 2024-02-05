@@ -9,8 +9,8 @@
 </head>
 <body>
     <div form="whole-container">
-        <div class="progress form-container">
-            <label for="file">Order progress:</label>
+        <div class="progress">
+            <!-- <label for="file">Order progress:</label> -->
             <progress id="file" value="32" max="100"> 32% </progress>
         </div>
         <div class="form-container-personal form-container">
@@ -38,8 +38,8 @@
                         <input type="phone" id="phone" name="phone" value="Phone number" required>
                     </div class="field">
                     <div class="field">
-                    <label for="website">Website</label>
-                        <input type="url" id="website" name="website" value="https://www.example.com"><br>
+                        <label for="website">Website</label>
+                        <input type="url" id="website" name="website" value="https://www.example.com">
                     </div>
                     <div class="field">
                     <label for="dob">Date of birth</label>
@@ -114,7 +114,7 @@
                     </div>
                     <div class="field">
                         <label for="post_zip">Special delivery instruction</label>
-                        <textarea>Enter your instruction here...</textarea>
+                        <textarea placeholder="Enter your instruction here..."></textarea>
                     </div>
                 </fieldset>
                 <fieldset class="billing-address">
