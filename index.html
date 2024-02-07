@@ -9,7 +9,7 @@
 </head>
 <body>
     <div form="whole-container">
-        <div class="progress">
+        <div class="progress-header">
             <!-- <label for="file">Order progress:</label> -->
             <progress id="file" value="32" max="100"> 32% </progress>
         </div>
@@ -19,31 +19,35 @@
                     <legend>Enter your personal details</legend>
                     <div class="field">
                         <label for="first_name">First name</label>
-                        <input type="text" id="first_name" name="first_name" value="First name" required>
+                        <input type="text" id="first_name" name="first_name" placeholder="First name" required>
+                        <span></span>
                     </div>
                     <div class="field">
                         <label for="last_name">Last name</label>
-                        <input type="text" id="last_name" name="last_name" value="Last name" required>
+                        <input type="text" id="last_name" name="last_name" placeholder="Last name" required>
+                        <span></span>
                     </div>
                     <div class="field">
                         <label for="company_name">Company name</label>
-                        <input type="text" id="company_name" name="company name" value="Company name" required>
+                        <input type="text" id="company_name" name="company name" placeholder="Company name" required>
+                        <span></span>
                     </div>
                     <div class="field">
                         <label for="email">Email address</label>
-                        <input type="email" id="email" name="email" value="your@email.com" required>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        <span></span>
                     </div>
                     <div class="field">
                         <label for="phone">Phone number</label>
-                        <input type="phone" id="phone" name="phone" value="Phone number" required>
+                        <input type="phone" id="phone" name="phone" placeholder="022 234 4567" required>
                     </div class="field">
                     <div class="field">
                         <label for="website">Website</label>
-                        <input type="url" id="website" name="website" value="https://www.example.com">
+                        <input type="url" id="website" name="website" placeholder="https://www.example.com">
                     </div>
                     <div class="field">
                     <label for="dob">Date of birth</label>
-                        <input type="date" id="dob" name="dob" value="Date of birth">
+                        <input type="date" id="dob" name="dob">
                     </div>
                 </fieldset>
                 <div>
@@ -56,7 +60,7 @@
                 <fieldset>
                     <legend>How would you like to receive your order?</legend>
                     <div class="field">
-                        <label for="pickup">Pick it up from one of our stores</label>
+                        <label for="pickup">Pick it up from a store</label>
                         <input type="radio" id="pickup" name="pickup" checked>
                     </div>
                     <div class="field">
@@ -85,36 +89,43 @@
                 <fieldset class="delivery-address">
                     <legend>Enter your delivery address</legend>
                     <div class="field">
-                        <label for="full_address">Your address</label>
-                        <input type="search" id="full_address" name="full_address" value="Start typing...">
+                        <label for="full_address">Address</label>
+                        <input type="search" id="full_address" name="full_address" placeholder="Start typing...">
+                        <span></span>
                     </div>
-                    <div class="field">
+                    <!-- <div class="field">
                         <label for="manual_address">Enter address manually</label>
                         <input type="checkbox" id="manual_address" name="manual_address">
-                    </div>
+                        <span></span>
+                    </div> -->
                     <div class="field">
-                        <label for="apt_building">Apartment/Building name</label>
-                        <input type="text" id="apt_building" name="apt_building" value="Apartment/Building name" disabled>
+                        <label for="address_line_2">Address line 2</label>
+                        <input type="text" id="address_line_2" name="address_line_2" placeholder="Address Line 2" disabled>
+                        <span></span>
                     </div>
-                    <div class="field">
+                    <!-- <div class="field">
                         <label for="last_name">Street name</label>
                         <input type="text" id="street_name" name="street" value="Street name" disabled>
+                    </div> -->
+                    <div class="field">
+                        <label for="suburb_town">Suburb/Town</label>
+                        <input type="text" id="suburb_town" name="suburb_town" placeholder="Suburb/Town" disabled>
+                        <span></span>
                     </div>
                     <div class="field">
-                        <label for="town_city">Suburb/Town/City</label>
-                        <input type="text" id="town_city" name="town_city" value="Suburb/Town/City" disabled>
-                    </div>
-                    <div class="field">
-                        <label for="state_region">State/County/Region</label>
-                        <input type="text" id="state_region" name="state_region" value="State/County/Region" disabled>
+                        <label for="city_region">City/Region</label>
+                        <input type="text" id="city_region" name="city_region" placeholder="City/Region" disabled>
+                        <span></span>
                     </div>
                     <div class="field">
                         <label for="post_zip">Post/Zip code</label>
-                        <input type="text" id="post_zip" name="post_zip" value="Post code/Zip code" disabled>
+                        <input type="text" id="post_zip" name="post_zip" placeholder="Post code/Zip code" disabled>
+                        <span></span>
                     </div>
-                    <div class="field">
-                        <label for="post_zip">Special delivery instruction</label>
+                    <div class="special field">
+                        <label>Special delivery instruction</label>
                         <textarea placeholder="Enter your instruction here..."></textarea>
+                        <span></span>
                     </div>
                 </fieldset>
                 <fieldset class="billing-address">
@@ -165,7 +176,7 @@
                     <label for="card_number">Card number</label>
                     <input type="number" id="card_number" name="card_number">
                 </div>
-                <div class="field">
+                <div class="expiry field">
                     <label for="expiry_date">Expiry Date</label>
                     <input type="number" id="exp_month" name="exp_month">
                     <input type="number" id="exp_year" name="exp_year">
@@ -183,7 +194,7 @@
                     <input
                         type="range"
                         name="rating"
-                        id="price"
+                        id="satisfaction"
                         min="50000"
                         max="500000"
                         step="100"

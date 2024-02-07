@@ -20,7 +20,8 @@
 }
 
 body {
-    background-color: rgb(24, 161, 148);
+    background-color: white;
+    /* background-color: rgb(24, 161, 148); */
     font-family: "roboto", "PT Sans", Calibri, Tahoma, sans-serif;
 }
 
@@ -37,7 +38,7 @@ legend {
 }
 
 .form-container {
-    max-width: 600px;
+    max-width: 550px;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 40px;
@@ -46,44 +47,118 @@ legend {
 .field {
     display: flex;
     flex-direction: row;
-    margin-bottom: 10px;
-    justify-content: space-between;
+    margin: 20px 0px;
+    align-items: center;
+    position: relative;
 }
 
-.field > input {
-
+.special {
+    align-items: flex-start;
 }
 
+label {
+    width: 180px;
+    text-align: right;
+    margin-right: 50px;
+}
+
+/* -------------------------------------------------- */
+/* INPUT STYLING                                      */
+/* -------------------------------------------------- */
 input, select {
-    /* border-radius: 5px; */
+    border-radius: 5px;
+    border-width: 1px;
     box-sizing: border-box;
     width: 250px;
     height: 40px;
-    padding: 1px 2px;
-}
-
-input[value], textarea[value] {
-    color: gray;
-}
-
-textarea {
-    /* border-radius: 5px; */
-    width: 250px;
-    height: 90px;
+    padding: 1px 6px;
+    
 }
 
 input[type="checkbox"], input[type="radio"] {
+    /* appearance: none; */
     width: 20px;
-    height: 20px;
+    height: 20px;    
+}
 
+#satisfaction {
+    width: 500px;
 }
 
 #exp_month, #exp_year, #ccv {
     width: 50px;
+    margin-right: 10px;
+}
+
+textarea {
+    border-radius: 5px;
+    border-width: 1px;
+    width: 250px;
+    height: 90px;
+}
+
+::placeholder {
+    color: rgb(195, 195, 195);
+}
+
+input:hover:enabled, input:focus:enabled, textarea:hover:enabled {
+    background-color: #eee;
+  }
+
+input + span::before {
+    position: absolute;
+    right: -20px;
+    bottom: 3px;
+}
+
+input:required + span::after {
+    font-size: 0.6rem;
+    position: absolute;
+    content: "required";
+    color: white;
+    background-color: rgb(106, 106, 106);
+    padding: 5px 10px;
+    bottom: 3px;
+    right: 25px;
+}  
+
+input:invalid {
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.041);
+ }
+
+ input:invalid + span::before {
+   content: "✖";
+   color: red;
+   bottom: 9px;
+   right: 0px;
+ }
+
+input:valid + span::before {
+    content: "✓";
+    color: green;
+    bottom: 9px;
+    right: 0px;
+}
+
+
+select {
+    /* appearance: none; */
+}
+
+/* -------------------------------------------------- */
+/* INPUT STYLING                                      */
+/* -------------------------------------------------- */
+
+.progress-header {
+    margin-bottom: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
+    box-sizing: border-box;
 }
 
 progress {
-    height: 24px;
+    height: 18px;
     width: 100%;
     border-radius: 0px;
 }
@@ -93,7 +168,7 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
-    background-color: hsla(240,100%,86.08%, 1);
+    background-color: rgb(184, 184, 255);
 }
 
 button {
@@ -115,6 +190,9 @@ button:hover {
     background-color: hsla(247.5,100%,98.43%,1);
     border-radius: 20px;
     padding: 10px;
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(82,82,82,1);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(82,82,82,1);
+    box-shadow: 2px 2px 3px 0px rgba(82,82,82,1);
 }
 
 form {
